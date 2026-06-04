@@ -1,5 +1,6 @@
 import React from "react";
 import HomeSection from "../HomeSection";
+import {Accordion, AccordionItem, AccordionTrigger, AccordionContent} from '../ui/accordion';
 
 const sectionStyle = {
   maxWidth: "780px",
@@ -12,11 +13,25 @@ const bodyStyle = {
   lineHeight: 1.75,
 };
 
+const accordionStyle = {
+  color: "var(--gf-color-text-subtle)",
+  fontSize: "1.05rem",
+  lineHeight: 1.75,
+  underline: false
+};
+
 const h3Style = {
   fontSize: "1.2rem",
   fontWeight: 700,
   marginBottom: "0.75rem",
 };
+
+const h2Style = {
+	fontSize: "2.5rem",
+	textAlign: "center",
+	fontFamily: 'metropolis',
+	fontWeight: 600,
+}
 
 const audienceGridStyle = {
   display: "grid",
@@ -52,49 +67,58 @@ const audiences = [
 ];
 
 export default function TheStory() {
-  return (
+  return (  
     <HomeSection title="The Problem">
-      <div style={sectionStyle}>
-        <p style={bodyStyle}>
-          Financial institutions are moving to the public cloud, but the cloud wasn't built with
-          financial services in mind.
-        </p>
-        <p style={bodyStyle}>
-          Every major cloud provider works differently. That means every bank, insurer, and asset
-          manager has to figure out, largely on their own, how to configure cloud services securely,
-          meet their regulatory obligations, and prove to auditors that they've done it right.
-          Multiply that effort across dozens of cloud services and a patchwork of regulators in the
-          US, UK, EU, and beyond, and the result is enormous duplication of work, inconsistent
-          security outcomes, and spiralling compliance costs.
-        </p>
-        <p style={bodyStyle}>
-          Regulators have taken notice. The US Treasury, UK HM Treasury, EU DORA, and the Monetary
-          Authority of Singapore have all flagged the same core concerns: cloud providers lack
-          transparency, no single firm can manage concentration risk alone, and the fragmented
-          regulatory landscape is creating systemic vulnerability across the sector.
-        </p>
-      </div>
 
-      <div style={sectionStyle}>
-        <h3 style={{ ...h3Style, textAlign: "center" }}>The Solution: FINOS Common Cloud Controls</h3>
-        <p style={bodyStyle}>
-          FINOS CCC is an open industry standard that defines a consistent set of security,
-          resiliency, and compliance controls for public cloud services, written once and usable
-          across every major cloud provider.
-        </p>
-        <p style={bodyStyle}>
-          Instead of each institution reinventing the wheel, CCC gives the whole financial services
-          industry a shared baseline. Cloud providers can certify against it. Regulators can map
-          their requirements to it. And banks can use it to deploy compliant cloud infrastructure
-          with confidence, regardless of which cloud they're on.
-        </p>
-        <p style={bodyStyle}>
-          CCC classifies cloud services into a common taxonomy, builds a threat model for each
-          service type using the MITRE ATT&CK framework, identifies the controls that mitigate
-          those threats, and defines what compliant implementation looks like on each cloud
-          provider. The result is a machine-verifiable standard that removes ambiguity for everyone.
-        </p>
-      </div>
+      <Accordion type="single" defaultValue="" collapsible className="w-full" style={sectionStyle}>
+        <AccordionItem value="problem">
+          <AccordionTrigger style={accordionStyle}>
+            Financial institutions are moving to the public cloud, but the cloud wasn't built with
+            financial services in mind.
+          </AccordionTrigger>
+          <AccordionContent style={bodyStyle}>
+            <p>
+            Every major cloud provider works differently. That means every bank, insurer, and asset
+            manager has to figure out, largely on their own, how to configure cloud services securely,
+            meet their regulatory obligations, and prove to auditors that they've done it right.
+            Multiply that effort across dozens of cloud services and a patchwork of regulators in the
+            US, UK, EU, and beyond, and the result is enormous duplication of work, inconsistent
+            security outcomes, and spiralling compliance costs.
+          </p>
+          <p style={bodyStyle}>
+            Regulators have taken notice. The US Treasury, UK HM Treasury, EU DORA, and the Monetary
+            Authority of Singapore have all flagged the same core concerns: cloud providers lack
+            transparency, no single firm can manage concentration risk alone, and the fragmented
+            regulatory landscape is creating systemic vulnerability across the sector.
+          </p>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+
+      <h2 style={{ ...h2Style, textAlign: "center" }}>The Solution: FINOS Common Cloud Controls</h2>
+      <Accordion type="single" collapsible className="w-full" style={sectionStyle}>
+        <AccordionItem value="solution">
+          <AccordionTrigger style={bodyStyle}>
+            FINOS CCC is an open industry standard that defines a consistent set of security,
+            resiliency, and compliance controls for public cloud services, written once and usable
+            across every major cloud provider.
+          </AccordionTrigger>
+          <AccordionContent style={bodyStyle}>
+            <p style={bodyStyle}>
+              Instead of each institution reinventing the wheel, CCC gives the whole financial services
+              industry a shared baseline. Cloud providers can certify against it. Regulators can map
+              their requirements to it. And banks can use it to deploy compliant cloud infrastructure
+              with confidence, regardless of which cloud they're on.
+            </p>
+            <p style={bodyStyle}>
+              CCC classifies cloud services into a common taxonomy, builds a threat model for each
+              service type using the MITRE ATT&CK framework, identifies the controls that mitigate
+              those threats, and defines what compliant implementation looks like on each cloud
+              provider. The result is a machine-verifiable standard that removes ambiguity for everyone.
+            </p>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
 
       <div style={{ maxWidth: "780px", margin: "0 auto 2.5rem auto" }}>
         <h3 style={{ ...h3Style, textAlign: "center" }}>Who Is It For?</h3>
