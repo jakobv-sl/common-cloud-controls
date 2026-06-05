@@ -6,6 +6,7 @@ import LevelUp from "../components/LevelUp";
 import AdvanceAutomatedGovernance from "../components/AdvanceAutomatedGovernence";
 import TheStory from "../components/TheStory";
 import JoinCommunity from "../components/JoinCommunity";
+import Contributors from "../components/Contributors";
 
 export default function Home(): ReactNode {
   return (
@@ -17,6 +18,7 @@ export default function Home(): ReactNode {
         <LevelUp />
         <AdvanceAutomatedGovernance />
         <JoinCommunity />
+        <Contributors />
       </main>
     </Layout>
   );
