@@ -3,10 +3,10 @@ import Layout from "@theme/Layout";
 import Contributors from "../../Contributors";
 
 
-export default function CALMSuite() {
+export default function CALM() {
 
   return (
-    <Layout title="CALMSuite">
+    <Layout title="CALM">
     </Layout>
   );
 }

@@ -10,26 +10,26 @@ const pages = [
   'gemara', 
   'grc-store', 
   'github-releases',
-  'calmsuite',
+  'calm',
 ];
-export default function pluginEcosystemsPages(context: LoadContext): Plugin<void> {
+export default function pluginecosystemPages(context: LoadContext): Plugin<void> {
   return {
-    name: "ecosystems-pages",
+    name: "ecosystem-pages",
 
     async contentLoaded({ actions }) {
       const { createData, addRoute } = actions;
 
       pages.forEach(page => {
         addRoute({
-          path: "/ecosystems/"+page,
-          component: "@site/src/components/ecosystems/"+page+"/index.tsx",
+          path: "/ecosystem/"+page,
+          component: "@site/src/components/ecosystem/"+page+"/index.tsx",
           exact: true,
         });
       });
 
       addRoute({
-        path: "/ecosystems",
-        component: "@site/src/components/ecosystems/Home/index.tsx",
+        path: "/ecosystem",
+        component: "@site/src/components/ecosystem/Home/index.tsx",
         exact: true,
       });
     },
