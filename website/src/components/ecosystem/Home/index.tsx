@@ -52,9 +52,7 @@ export default function EcosystemHomePage() {
                 <img src={"/img/ecosystem/"+m.nav+".svg"} alt={m.name} className={styles.logo} />
             </div>
             <div className={styles.body}>
-              <div className={styles.row}>
                 <span className={styles.label}>{m.name}</span>
-              </div>
             </div>
           </Link>
         ))}
