@@ -1,8 +1,7 @@
 section.homeSection {
-	max-width: 49.5rem;
+	max-width: 66rem;
 	margin: auto;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	padding: 1.5rem;
 	overflow: visible;
 }
 
@@ -29,8 +28,8 @@ div.footerImage {
 	float: right;
 	margin: 0 0 1rem 1rem;
 	background: var(--gf-color-background-strong);
-	padding: 3rem;
-	max-width: 17rem;
+	padding: 1rem;
+	width: 17rem;
 	border: 1px solid var(--gf-color-accent-soft);
 	border-radius: 1rem;
 }
@@ -52,7 +51,6 @@ div.footerImage {
 		justify-content: center;
 		padding: 1.25rem;
 		max-width: none;
-		border-radius: 0px;
 	}
 	.logo{
 		height: 6rem;

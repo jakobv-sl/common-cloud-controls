@@ -2,45 +2,8 @@ import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
+import {pages} from "../../../plugin/ecosystem-pages"
 
-const pages = [
-  {
-    name: 'AWS Lightning Lane',
-    nav: 'aws-lightning-lane',
-  },
-  {
-    name: 'Azure Policy',
-    nav: 'azure-policy',
-  },
-  {
-    name: 'Azure Verified Modules',
-    nav: 'azure-verified-modules',
-  },
-  {
-    name: 'CALM',
-    nav: 'calm',
-  },
-  {
-    name: 'Gemara',
-    nav: 'gemara',
-  },
-  {
-    name: 'GitHub Releases',
-    nav: 'github-releases',
-  },
-  {
-    name: 'GRC.Store',
-    nav: 'grc-store',
-  },
-  {
-    name: 'Privateer',
-    nav: 'privateer',
-  },
-  {
-    name: 'Prowler',
-    nav: 'prowler',
-  },
-];
 export default function EcosystemHomePage() {
 
   return (

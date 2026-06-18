@@ -1,17 +1,45 @@
 import type { LoadContext, Plugin } from "@docusaurus/types";
 
 
-const pages = [
-  'prowler',
-  'privateer', 
-  'azure-policy',
-  'azure-verified-modules',
-  'aws-lightning-lane', 
-  'gemara', 
-  'grc-store', 
-  'github-releases',
-  'calm',
+export const pages = [
+  {
+    name: 'AWS Lightning Lane',
+    nav: 'aws-lightning-lane',
+  },
+  {
+    name: 'Azure Policy',
+    nav: 'azure-policy',
+  },
+  {
+    name: 'Azure Verified Modules',
+    nav: 'azure-verified-modules',
+  },
+  {
+    name: 'CALM',
+    nav: 'calm',
+  },
+  {
+    name: 'Gemara',
+    nav: 'gemara',
+  },
+  {
+    name: 'GitHub Releases',
+    nav: 'github-releases',
+  },
+  {
+    name: 'GRC.Store',
+    nav: 'grc-store',
+  },
+  {
+    name: 'Privateer',
+    nav: 'privateer',
+  },
+  {
+    name: 'Prowler',
+    nav: 'prowler',
+  },
 ];
+
 export default function pluginecosystemPages(context: LoadContext): Plugin<void> {
   return {
     name: "ecosystem-pages",
@@ -21,8 +49,8 @@ export default function pluginecosystemPages(context: LoadContext): Plugin<void>
 
       pages.forEach(page => {
         addRoute({
-          path: "/ecosystem/"+page,
-          component: "@site/src/components/ecosystem/"+page+"/index.tsx",
+          path: "/ecosystem/"+page.nav,
+          component: "@site/src/components/ecosystem/"+page.nav+"/index.tsx",
           exact: true,
         });
       });
