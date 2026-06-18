@@ -70,15 +70,16 @@ const config: Config = {
           position: 'left',
           type: 'dropdown',
           items: [
-            { to: '/ecosystem/prowler', label: 'Prowler' },
-            { to: '/ecosystem/privateer', label: 'Privateer' },
+            { to: '/ecosystem/aws-lightning-lane', label: 'AWS Lightning Lane' },
             { to: '/ecosystem/azure-policy', label: 'Azure Policy' },
             { to: '/ecosystem/azure-verified-modules', label: 'Azure Verified Modules' },
-            { to: '/ecosystem/aws-lightning-lane', label: 'AWS Lightning Lane' },
-            { to: '/ecosystem/gemara', label: 'Gemara' },
-            { to: '/ecosystem/grc-store', label: 'GRC.Store' },
-            { to: '/ecosystem/github-releases', label: 'GitHub releases' },
             { to: '/ecosystem/calm', label: 'CALM' },
+            { to: '/ecosystem/gemara', label: 'Gemara' },
+            { to: '/ecosystem/github-releases', label: 'GitHub releases' },
+
+            { to: '/ecosystem/grc-store', label: 'GRC.Store' },
+            { to: '/ecosystem/privateer', label: 'Privateer' },
+            { to: '/ecosystem/prowler', label: 'Prowler' },
           ],
         },
         {
